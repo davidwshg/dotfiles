@@ -3,6 +3,7 @@ apt install git zsh -y
 
 cd; git clone https://github.com/DavidWashington833/dotfiles.git ~/.dotfiles
 
+mkdir ~/.dotbackup
 mv ~/.bash_profile ~/.dotbackup/.bash_profile
 mv ~/.bashrc ~/.dotbackup/.bashrc_backup
 cp ~/.dotfiles/.bash_profile ~/.bash_profile
