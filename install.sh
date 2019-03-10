@@ -15,6 +15,7 @@ apt install -y \
     docker.io \
     code \
     spotify-client \
+    gdebi \
     --no-install-recommends yarn
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -23,6 +24,9 @@ groupadd docker && usermod -aG docker $USER
 
 curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
+
+curl -O https://hyper-updates.now.sh/download/linux_deb
+gdebi linux_deb
 
 # clone dotfiles
 git clone https://github.com/DavidWashington833/dotfiles.git ~/.dotfiles
