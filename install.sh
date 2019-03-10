@@ -1,24 +1,39 @@
-apt update -y
-apt install git zsh docker.io -y
+cd
 
-cd; git clone https://github.com/DavidWashington833/dotfiles.git ~/.dotfiles
+# install dependencies
+add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.list.d/spotify.list
 
-mkdir ~/.dotbackup
-
-mv ~/.zsh ~/.dotbackup/
-mv ~/.bashrc ~/.dotbackup/
-mv ~/.bash_profile ~/.dotbackup/
-
-cp ~/.dotfiles/.zsh ~/1
-cp ~/.dotfiles/.bashrc ~/
-cp ~/.dotfiles/.bash_profile ~/
+apt update -y && apt upgrade -y
+apt install -y \
+    zsh \
+    curl \
+    git \
+    software-properties-common \
+    apt-transport-https \
+    docker.io \
+    code \
+    spotify-client \
+    --no-install-recommends yarn
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-curl -O "https://raw.githubusercontent.com/rupa/z/master/z.sh" && mv z.sh ~/.dotfiles/z.sh
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-
-source ~/.bashrc
-
-nvm install --lts
 
 groupadd docker && usermod -aG docker $USER
+
+curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i google-chrome-stable_current_amd64.deb
+
+# clone dotfiles
+git clone https://github.com/DavidWashington833/dotfiles.git ~/.dotfiles
+
+mkdir ~/.dotbackup
+mv ~/.zshrc ~/.dotbackup/
+cp ~/.dotfiles/.zshrc ~/
+
+source ~/.zshrc
+
+curl -O "https://raw.githubusercontent.com/rupa/z/master/z.sh" && mv z.sh ~/.dotfiles/z.sh
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | zsh
+
+nvm install --lts
