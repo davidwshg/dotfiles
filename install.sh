@@ -24,11 +24,15 @@ groupadd docker && usermod -aG docker $USER
 
 curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
 
 curl -O https://hyper-updates.now.sh/download/linux_deb
 gdebi linux_deb
+rm linux_deb
 
 # clone dotfiles
+git config --global user.name "David Washington"
+git config --global user.email "davidwashington833@gmail.com"
 git clone https://github.com/DavidWashington833/dotfiles.git ~/.dotfiles
 
 mkdir ~/.dotbackup
