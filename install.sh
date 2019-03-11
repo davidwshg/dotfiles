@@ -38,6 +38,6 @@ cp ~/.dotfiles/.zshrc ~/
 source ~/.zshrc
 
 curl -O "https://raw.githubusercontent.com/rupa/z/master/z.sh" && mv z.sh ~/.dotfiles/z.sh
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | zsh
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 nvm install --lts
