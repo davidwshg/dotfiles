@@ -30,6 +30,8 @@ curl -O https://hyper-updates.now.sh/download/linux_deb
 gdebi linux_deb
 rm linux_deb
 
+chsh -s /bin/zsh
+
 # clone dotfiles
 git config --global user.name "David Washington"
 git config --global user.email "davidwashington833@gmail.com"
