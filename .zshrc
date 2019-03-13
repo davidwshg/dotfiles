@@ -10,3 +10,5 @@ export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 . ~/.dotfiles/z.sh
+
+PATH=$PATH:node_modules/.bin/
