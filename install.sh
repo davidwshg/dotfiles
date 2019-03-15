@@ -1,9 +1,6 @@
 cd
 
 # install dependencies
-add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-echo deb http://repository.spotify.com stable non-free | tee /etc/apt/sources.list.d/spotify.list
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
@@ -15,10 +12,14 @@ apt install -y \
     software-properties-common \
     apt-transport-https \
     docker.io \
-    code \
-    spotify-client \
     gdebi \
+    snapd \
     --no-install-recommends yarn
+
+snap install \
+	vscode --classic \
+	slack --classic \
+	spotify
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
