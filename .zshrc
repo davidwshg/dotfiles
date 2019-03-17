@@ -1,14 +1,7 @@
-export ZSH="/home/$USER/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-. ~/.dotfiles/z.sh
+for file in ~/.dotfiles/.{exports,oh-my-zsh}; do
+  [ -r "$file" ] && source "$file"
+done
 
 PATH=$PATH:node_modules/.bin/
+
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

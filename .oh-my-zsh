@@ -1,0 +1,18 @@
+source $ZSH/oh-my-zsh.sh
+
+ZSH_THEME="robbyrussell"
+
+plugins=(
+  command-not-found
+  common-aliases
+  debian
+  chucknorris
+  dirhistory
+  extract
+  git
+  git-extras
+  vscode
+  web-search
+  yarn
+  z
+)
