@@ -1,7 +1,27 @@
-for file in ~/.dotfiles/.{exports,oh-my-zsh}; do
-  [ -r "$file" ] && source "$file"
-done
+export ZSH=~/.oh-my-zsh
+
+ZSH_THEME="robbyrussell"
+
+plugins=(
+  command-not-found
+  common-aliases
+  debian
+  dirhistory
+  extract
+  git
+  git-extras
+  vscode
+  web-search
+  yarn
+  z
+)
+
+source $ZSH/oh-my-zsh.sh
+
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 PATH=$PATH:node_modules/.bin/
 
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+for file in ~/.dotfiles/.{exports}; do
+  [ -r "$file" ] && source "$file"
+done
