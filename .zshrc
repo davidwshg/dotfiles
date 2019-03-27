@@ -21,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 PATH=$PATH:node_modules/.bin/
+PATH=$PATH:~/.yarn/bin
 
 for file in ~/.dotfiles/.{exports}; do
   [ -r "$file" ] && source "$file"
