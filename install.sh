@@ -25,7 +25,7 @@ snap install \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
 
-git clone https://github.com/DavidWashington833/dotfiles.git ~/.dotfiles
+git clone https://github.com/davidwfs/dotfiles.git ~/.dotfiles
 git config --global user.name "David Washington"
 git config --global user.email "davidwashington833@gmail.com"
 
