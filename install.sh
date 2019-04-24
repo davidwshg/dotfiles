@@ -14,7 +14,7 @@ apt install -y \
     snapd \
     --no-install-recommends yarn
 
-snap install vscode --classic
+snap install code --classic
 snap install slack --classic
 snap install \
     spotify \
