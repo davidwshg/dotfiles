@@ -2,7 +2,7 @@
 
 ## Install
 ```
-curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/install.sh | sh
+curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/install.sh | sudo sh
 ```
 
 ## License
