@@ -13,17 +13,6 @@ apt install -y \
     snapd \
     --no-install-recommends yarn
 
-snap install code --classic
-snap install slack --classic
-snap install android-studio --classic
-snap install kubectl --classic
-snap install \
-    spotify \
-    postman \
-    chromium \
-    altair \
-    docker
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
 
@@ -37,3 +26,14 @@ chsh -s /bin/zsh
 source ~/.zshrc
 
 nvm install --lts
+
+snap install code --classic
+snap install slack --classic
+snap install android-studio --classic
+snap install kubectl --classic
+snap install \
+    spotify \
+    postman \
+    chromium \
+    altair \
+    docker

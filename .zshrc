@@ -18,11 +18,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export NVM_DIR=~/.nvm
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 PATH=$PATH:node_modules/.bin/
 PATH=$PATH:~/.yarn/bin
-
-for file in ~/.dotfiles/.{exports}; do
-  [ -r "$file" ] && source "$file"
-done
