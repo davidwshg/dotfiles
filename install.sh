@@ -11,7 +11,8 @@ apt install -y \
     apt-transport-https \
     gdebi \
     snapd \
-    --no-install-recommends yarn
+    --no-install-recommends yarn \
+    openjdk-8-jre-headless
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
