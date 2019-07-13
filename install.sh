@@ -9,7 +9,6 @@ apt install -y \
     git \
     software-properties-common \
     apt-transport-https \
-    docker.io \
     gdebi \
     snapd \
     --no-install-recommends yarn
@@ -21,7 +20,8 @@ snap install \
     spotify \
     postman \
     chromium \
-    altair
+    altair \
+    docker
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
@@ -32,7 +32,6 @@ mkdir ~/.dotbackup
 mv ~/.zshrc ~/.dotbackup/
 cp ~/.dotfiles/.zshrc ~/
 
-groupadd docker && usermod -aG docker $USER
 chsh -s /bin/zsh
 source ~/.zshrc
 
