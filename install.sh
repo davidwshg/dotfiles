@@ -16,6 +16,7 @@ apt install -y \
 
 snap install code --classic
 snap install slack --classic
+snap install android-studio --classic
 snap install \
     spotify \
     postman \
