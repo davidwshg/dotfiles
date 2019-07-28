@@ -3,7 +3,9 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 plugins=(
-  command-not-found
+  cp
+  colorize
+  compleat
   common-aliases
   debian
   dirhistory
