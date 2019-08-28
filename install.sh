@@ -22,10 +22,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.1/bin/linux/amd64/kubectl
+curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 git clone https://github.com/davidwfs/dotfiles.git ~/.dotfiles
 
 groupadd docker && usermod -aG docker $USER
+chmod +x /usr/local/bin/docker-compose
 chmod +x minikube
 mv minikube /usr/local/bin/
 chmod +x ~/kubectl 
