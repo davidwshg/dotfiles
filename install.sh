@@ -16,6 +16,7 @@ apt install -y \
     virtualbox \
     --no-install-recommends yarn \
     openjdk-8-jre-headless \
+    python3-pip \
     vim
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -38,6 +39,8 @@ mv ~/.zshrc ~/.dotbackup/
 cp ~/.dotfiles/.zshrc ~/
 
 nvm install --lts
+
+pip3 install Pygments
 
 snap install code --classic
 snap install slack --classic
