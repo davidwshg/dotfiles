@@ -1,8 +1,10 @@
 # dotfiles
 
+This is some common tools to start in new computer.
+
 ## Install
 ```
-curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/install.sh | sudo sh
+curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/deb-install.sh | sudo sh
 ```
 
 ## License
