@@ -21,6 +21,7 @@ brew install --cask \
     iterm2 \
     notion \
     github \
+    evernote \
     adoptopenjdk8
 
 brew install \
