@@ -4,7 +4,7 @@ This is some common tools to start in new computer.
 
 ## Install on macOS
 ```
-curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/mac-install.sh | sudo sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidwfs/dotfiles/master/mac-install.sh)"
 ```
 
 ## Install on deb
