@@ -15,7 +15,6 @@ plugins=(
   dirhistory
   docker
   docker-compose
-  emoji
   extract
   fzf
   git
