@@ -17,7 +17,6 @@ apt install -y \
     --no-install-recommends yarn \
     # openjdk-8-jre-headless \
     vim \
-    make \
     build-essential \
     libssl-dev \
     zlib1g-dev \
@@ -30,7 +29,10 @@ apt install -y \
     libncurses5-dev \
     libncursesw5-dev \
     xz-utils \
-    tk-dev \
+    tk-dev
+
+apt install -y \
+    make \
     fortune \
     fzf \
     gcc
