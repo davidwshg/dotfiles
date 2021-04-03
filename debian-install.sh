@@ -10,13 +10,12 @@ apt install -y \
     git \
     software-properties-common \
     apt-transport-https \
-    docker.io \
+    # docker.io \
     gdebi \
     snapd \
-    virtualbox \
+    # virtualbox \
     --no-install-recommends yarn \
-    openjdk-8-jre-headless \
-    python3-pip \
+    # openjdk-8-jre-headless \
     vim \
     make \
     build-essential \
