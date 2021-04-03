@@ -6,34 +6,35 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo add-apt-repository multiverse
 apt update -y && apt upgrade -y
 apt install -y \
-    --no-install-recommends yarn \
-    apt-transport-https \
-    build-essential \
-    curl \
-    # docker.io \
-    fortune \
-    fzf \
-    gcc \
-    gdebi \
+    zsh \
     git \
+    software-properties-common \
+    apt-transport-https \
+    docker.io \
+    gdebi \
+    snapd \
+    virtualbox \
+    --no-install-recommends yarn \
+    openjdk-8-jre-headless \
+    python3-pip \
+    vim \
+    make \
+    build-essential \
+    libssl-dev \
+    zlib1g-dev \
     libbz2-dev \
-    libncurses5-dev \
-    libncursesw5-dev \
     libreadline-dev \
     libsqlite3-dev \
-    libssl-dev \
-    llvm \
-    make \
-    # openjdk-8-jre-headless \
-    snapd \
-    software-properties-common \
-    tk-dev \
-    vim \
-    # virtualbox \
     wget \
+    curl \
+    llvm \
+    libncurses5-dev \
+    libncursesw5-dev \
     xz-utils \
-    zlib1g-dev \
-    zsh
+    tk-dev \
+    fortune \
+    fzf \
+    gcc
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
