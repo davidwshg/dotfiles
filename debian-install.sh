@@ -22,6 +22,11 @@ apt install -y \
     # openjdk-8-jre-headless \
     python3-pip \
     vim \
+    fortune \
+    fzf \
+    gcc
+
+apt-get install -y \
     make \
     build-essential \
     libssl-dev \
@@ -35,10 +40,7 @@ apt install -y \
     libncurses5-dev \
     libncursesw5-dev \
     xz-utils \
-    tk-dev \
-    fortune \
-    fzf \
-    gcc
+    tk-dev
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh)"
