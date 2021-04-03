@@ -9,7 +9,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidwfs/dotfiles/master/m
 
 ## Install on deb
 ```
-curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/deb-install.sh | sudo sh
+curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/debian-install.sh | sudo sh
 ```
 
 ## License

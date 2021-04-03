@@ -1,28 +1,37 @@
 export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
+DISABLE_UPDATE_PROMPT=true
 
 plugins=(
-  cp
+  alias-finder
+  catimg
+  chucknorris
   colorize
-  compleat
   common-aliases
+  compleat
+  cp
   debian
   dirhistory
+  docker
+  docker-compose
+  emoji
   extract
+  fzf
   git
   git-extras
+  npm
+  nvm
+  pip
+  pyenv
+  virtualenv
   vscode
   web-search
+  yarn
   yarn
   z
 )
 
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR=~/.nvm
-
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 PATH=$PATH:node_modules/.bin/
-PATH=$PATH:~/.yarn/bin

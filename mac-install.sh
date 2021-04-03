@@ -8,8 +8,6 @@ brew update && brew upgrade
 
 brew tap adoptopenjdk/openjdk
 
-brew link --force libpq ail
-
 brew install --cask \
     visual-studio-code \
     docker \
@@ -17,10 +15,7 @@ brew install --cask \
     postman \
     google-chrome \
     slack \
-    datagrip \
     iterm2 \
-    notion \
-    github \
     evernote \
     adoptopenjdk8
 
@@ -30,15 +25,18 @@ brew install \
     libpq \
     leiningen \
     pyenv \
-    fzf
+    fzf \
+    fortune \
+    cowsay \
+    ImageMagick
+
+brew link --force libpq
 
 git clone https://github.com/davidwfs/dotfiles.git ~/.dotfiles
 
 mkdir ~/.dotbackup
 mv ~/.zshrc ~/.dotbackup/
 cp ~/.dotfiles/.zshrc ~/
-
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 
 pyenv install 3.7.8
 pyenv global 3.7.8
