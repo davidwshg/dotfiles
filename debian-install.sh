@@ -5,6 +5,10 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 sudo add-apt-repository multiverse
 apt update -y && apt upgrade -y
+apt install -y zsh
+
+#!/bin/zsh
+
 apt install -y \
     zsh \
     git \
@@ -17,9 +21,7 @@ apt install -y \
     --no-install-recommends yarn \
     # openjdk-8-jre-headless \
     python3-pip \
-    vim
-
-apt-get install -y \
+    vim \
     make \
     build-essential \
     libssl-dev \
@@ -33,9 +35,7 @@ apt-get install -y \
     libncurses5-dev \
     libncursesw5-dev \
     xz-utils \
-    tk-dev
-
-apt install -y \
+    tk-dev \
     fortune \
     fzf \
     gcc
@@ -62,8 +62,6 @@ cd
 mkdir ~/.dotbackup
 mv ~/.zshrc ~/.dotbackup/
 cp ~/.dotfiles/.zshrc ~/
-
-nvm install --lts
 
 pyenv install 3.7.8
 pyenv global 3.7.8

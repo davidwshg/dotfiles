@@ -38,8 +38,6 @@ mkdir ~/.dotbackup
 mv ~/.zshrc ~/.dotbackup/
 cp ~/.dotfiles/.zshrc ~/
 
-nvm install --lts
-
 pyenv install 3.7.8
 pyenv global 3.7.8
 
