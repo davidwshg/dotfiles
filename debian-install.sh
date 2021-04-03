@@ -16,6 +16,7 @@ apt install -y \
     # virtualbox \
     --no-install-recommends yarn \
     # openjdk-8-jre-headless \
+    python3-pip \
     vim \
     build-essential \
     libssl-dev \
@@ -28,8 +29,7 @@ apt install -y \
     llvm \
     libncurses5-dev \
     libncursesw5-dev \
-    xz-utils \
-    tk-dev
+    xz-utils tk-dev
 
 apt install -y \
     make \
