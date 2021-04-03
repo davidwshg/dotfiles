@@ -17,7 +17,10 @@ apt install -y \
     --no-install-recommends yarn \
     # openjdk-8-jre-headless \
     python3-pip \
-    vim \
+    vim
+
+apt-get install -y \
+    make \
     build-essential \
     libssl-dev \
     zlib1g-dev \
@@ -29,10 +32,10 @@ apt install -y \
     llvm \
     libncurses5-dev \
     libncursesw5-dev \
-    xz-utils tk-dev
+    xz-utils \
+    tk-dev
 
 apt install -y \
-    make \
     fortune \
     fzf \
     gcc
