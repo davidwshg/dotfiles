@@ -2,14 +2,9 @@
 
 This is some common tools to start in new computer.
 
-## Install on macOS
+## Install on OSX
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidwfs/dotfiles/master/mac-install.sh)"
-```
-
-## Install on deb
-```
-curl --silent https://raw.githubusercontent.com/davidwfs/dotfiles/master/debian-install.sh | sudo sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidwfs/dotfiles/master/install.sh)"
 ```
 
 ## License
