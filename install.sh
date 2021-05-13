@@ -29,7 +29,8 @@ brew install \
     fortune \
     cowsay \
     ImageMagick \
-    htop
+    htop \
+    gcc
 
 brew link --force libpq
 
