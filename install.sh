@@ -46,7 +46,6 @@ pyenv global 3.7.8
 pip install \
     pygments \
     chroma \
-    virtualenv \
-    poetry
+    virtualenv
 
 python -m pip install --upgrade pip
