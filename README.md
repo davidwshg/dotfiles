@@ -5,6 +5,7 @@ This is some common tools to start in new computer.
 ## Install on OSX
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidwfs/dotfiles/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidwfs/dotfiles/master/config.sh)"
 ```
 
 ## License
