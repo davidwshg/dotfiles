@@ -33,6 +33,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-PATH=$PATH:node_modules/.bin/
-PATH="$PYENV_ROOT/bin:$PATH"
 PYENV_ROOT="$HOME/.pyenv"
+
+PATH=$PATH:node_modules/.bin/
+
+eval "$(pyenv init --path)"
