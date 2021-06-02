@@ -32,12 +32,6 @@ brew install \
 
 brew link --force libpq
 
-git clone https://github.com/davidwfs/dotfiles.git ~/.dotfiles
-
-mkdir ~/.dotbackup
-mv ~/.zshrc ~/.dotbackup/
-cp ~/.dotfiles/.zshrc ~/
-
 pyenv install 3.7.8
 pyenv global 3.7.8
 
