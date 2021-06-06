@@ -8,6 +8,7 @@ brew tap adoptopenjdk/openjdk
 
 brew install --cask \
     visual-studio-code \
+    azure-data-studio \
     docker \
     spotify \
     postman \
