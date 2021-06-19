@@ -16,6 +16,8 @@ brew install --cask \
     slack \
     iterm2 \
     evernote \
+    notion \
+    devdocs \
     adoptopenjdk8
 
 brew install \
@@ -29,7 +31,13 @@ brew install \
     cowsay \
     ImageMagick \
     htop \
-    gcc
+    gcc \
+    kubectl \
+    helm \
+    terraform \
+    fluxcd/tap/flux \
+    gnupg \
+    sops
 
 brew link --force libpq
 
