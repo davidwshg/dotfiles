@@ -1,6 +1,6 @@
 # dotfiles
 
-This is some common tools to start in new computer.
+Common tools to start in new computer.
 
 ## Install on OSX
 ```
