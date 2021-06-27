@@ -18,6 +18,7 @@ brew install --cask \
     evernote \
     notion \
     devdocs \
+    lens \
     adoptopenjdk8
 
 brew install \
