@@ -8,10 +8,10 @@ brew tap adoptopenjdk/openjdk
 
 brew install --cask \
     visual-studio-code \
-    azure-data-studio \
+    datagrip \
     docker \
     spotify \
-    postman \
+    insominia \
     google-chrome \
     slack \
     iterm2 \
@@ -38,7 +38,8 @@ brew install \
     terraform \
     fluxcd/tap/flux \
     gnupg \
-    sops
+    sops \
+    redis
 
 brew link --force libpq
 
