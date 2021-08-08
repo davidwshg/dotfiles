@@ -7,19 +7,19 @@ brew update && brew upgrade
 brew tap adoptopenjdk/openjdk
 
 brew install --cask \
-    visual-studio-code \
-    datagrip \
-    docker \
-    spotify \
-    postman \
     google-chrome \
     slack \
-    iterm2 \
     evernote \
     notion \
+    discord \
+    spotify \
+    visual-studio-code \
+    iterm2 \
+    datagrip \
+    postman \
+    docker \
     lens \
     ngrok \
-    discord \
     homebrew/cask-fonts/font-fira-code \
     adoptopenjdk8
 
@@ -35,19 +35,19 @@ brew install \
     ImageMagick \
     htop \
     gcc \
+    redis \
+    watch \
+    lua \
+    luarocks \
+    terraform \
+    golang \
+    minikube \
     kubectl \
     helm \
-    terraform \
+    skaffold \
     fluxcd/tap/flux \
     gnupg \
-    sops \
-    redis \
-    skaffold \
-    minikube \
-    lua \
-    golang \
-    luarocks \
-    watch
+    sops
 
 brew link --force libpq
 
