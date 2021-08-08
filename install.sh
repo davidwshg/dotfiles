@@ -11,13 +11,12 @@ brew install --cask \
     datagrip \
     docker \
     spotify \
-    insominia \
+    postman \
     google-chrome \
     slack \
     iterm2 \
     evernote \
     notion \
-    devdocs \
     lens \
     adoptopenjdk8
 
