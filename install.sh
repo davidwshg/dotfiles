@@ -18,6 +18,9 @@ brew install --cask \
     evernote \
     notion \
     lens \
+    ngrok \
+    discord \
+    homebrew/cask-fonts/font-fira-code \
     adoptopenjdk8
 
 brew install \
@@ -38,7 +41,13 @@ brew install \
     fluxcd/tap/flux \
     gnupg \
     sops \
-    redis
+    redis \
+    skaffold \
+    minikube \
+    lua \
+    golang \
+    luarocks \
+    watch
 
 brew link --force libpq
 
