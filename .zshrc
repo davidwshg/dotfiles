@@ -35,8 +35,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-PYENV_ROOT="$HOME/.pyenv"
-
 PATH=$PATH:node_modules/.bin/
 
-eval "$(pyenv init --path)"
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+[ -s ~/.luaver/completions/luaver.bash ] && . ~/.luaver/completions/luaver.bash
