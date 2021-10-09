@@ -35,6 +35,7 @@ brew install \
     ImageMagick \
     htop \
     gcc \
+    kafka \
     redis \
     watch \
     lua \
@@ -47,7 +48,9 @@ brew install \
     skaffold \
     fluxcd/tap/flux \
     gnupg \
-    sops
+    sops \
+    protobuf \
+    mongosh
 
 brew link --force libpq
 
