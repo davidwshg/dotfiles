@@ -18,7 +18,6 @@ brew install --cask \
     datagrip \
     postman \
     docker \
-    lens \
     ngrok \
     homebrew/cask-fonts/font-fira-code \
     adoptopenjdk8
