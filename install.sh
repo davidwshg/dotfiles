@@ -49,7 +49,8 @@ brew install \
     gnupg \
     sops \
     protobuf \
-    mongosh
+    mongosh \
+    mvn
 
 brew link --force libpq
 
