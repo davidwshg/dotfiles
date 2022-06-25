@@ -9,9 +9,7 @@ brew tap adoptopenjdk/openjdk
 brew install --cask \
     google-chrome \
     slack \
-    evernote \
     notion \
-    discord \
     spotify \
     visual-studio-code \
     iterm2 \
