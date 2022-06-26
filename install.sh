@@ -7,6 +7,7 @@ brew update && brew upgrade
 brew tap adoptopenjdk/openjdk
 
 brew install --cask \
+    1password \
     google-chrome \
     slack \
     notion \
