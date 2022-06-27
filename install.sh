@@ -49,6 +49,7 @@ brew install \
     sops \
     protobuf \
     mongosh \
+    mkcert \
     mvn
 
 brew link --force libpq
