@@ -16,7 +16,6 @@ plugins=(
   docker
   docker-compose
   extract
-  fzf
   git
   git-extras
   npm
