@@ -10,7 +10,7 @@ brew install --cask \
     1password \
     google-chrome \
     slack \
-    notion \
+    dynobase \
     spotify \
     visual-studio-code \
     iterm2 \
@@ -28,9 +28,6 @@ brew install \
     leiningen \
     pyenv \
     fzf \
-    fortune \
-    cowsay \
-    ImageMagick \
     htop \
     gcc \
     kafka \
@@ -60,8 +57,6 @@ pyenv global 3.7.8
 eval "$(pyenv init --path)"
 
 pip install \
-    pygments \
-    chroma \
     virtualenv
 
 python -m pip install --upgrade pip
