@@ -2,62 +2,66 @@ cd
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo 'PATH=$PATH:/opt/homebrew/bin' >> ~/.zshrc
+
+source ~/.zshrc
+
 brew update && brew upgrade
 
 brew tap adoptopenjdk/openjdk
 
 brew install --cask \
-    1password \
-    google-chrome \
-    slack \
-    dynobase \
-    spotify \
-    visual-studio-code \
-    iterm2 \
-    datagrip \
-    postman \
-    docker \
-    ngrok \
-    homebrew/cask-fonts/font-fira-code \
-    adoptopenjdk8
+  1password \
+  adoptopenjdk8 \
+  datagrip \
+  docker \
+  dynobase \
+  google-chrome \
+  homebrew/cask-fonts/font-fira-code \
+  iterm2 \
+  ngrok \
+  postman \
+  slack \
+  spotify \
+  visual-studio-code
 
 brew install \
-    git \
-    yarn \
-    libpq \
-    leiningen \
-    pyenv \
-    fzf \
-    htop \
-    gcc \
-    kafka \
-    redis \
-    watch \
-    lua \
-    luarocks \
-    terraform \
-    golang \
-    minikube \
-    kubectl \
-    helm \
-    skaffold \
-    fluxcd/tap/flux \
-    gnupg \
-    sops \
-    protobuf \
-    mongosh \
-    mkcert \
-    mvn
+  fluxcd/tap/flux \
+  fzf \
+  gcc \
+  git \
+  gnupg \
+  golang \
+  helm \
+  htop \
+  kafka \
+  kubectl \
+  leiningen \
+  libpq \
+  lua \
+  luarocks \
+  minikube \
+  mkcert \
+  mongosh \
+  mvn \
+  protobuf \
+  pyenv \
+  redis \
+  skaffold \
+  sops \
+  terraform \
+  watch \
+  yarn
 
 brew link --force libpq
 
-pyenv install 3.7.8
-pyenv global 3.7.8
+pyenv install 3.10.10
+pyenv global 3.10.10
 
 eval "$(pyenv init --path)"
 
 pip install \
-    virtualenv
+  virtualenv
 
 python -m pip install --upgrade pip
 

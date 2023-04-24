@@ -6,8 +6,6 @@ DISABLE_UPDATE_PROMPT=true
 plugins=(
   alias-finder
   catimg
-  chucknorris
-  colorize
   common-aliases
   compleat
   cp
@@ -16,20 +14,20 @@ plugins=(
   docker
   docker-compose
   extract
+  fzf
   git
   git-extras
+  kubectl
   npm
   nvm
   pip
   pyenv
+  terraform
   virtualenv
   vscode
   web-search
   yarn
-  yarn
   z
-  kubectl
-  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
