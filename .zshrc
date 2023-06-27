@@ -34,3 +34,5 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=$PATH:node_modules/.bin
 PATH=$PATH:/opt/homebrew/bin
+
+eval "$(pyenv init --path)"
