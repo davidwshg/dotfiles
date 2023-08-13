@@ -1,5 +1,7 @@
 cd
 
+softwareupdate --install-rosetta
+
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo 'PATH=$PATH:/opt/homebrew/bin' >> ~/.zshrc
@@ -44,12 +46,14 @@ brew install \
   mkcert \
   mongosh \
   mvn \
+  perimeter81 \
   protobuf \
   pyenv \
   redis \
   skaffold \
   sops \
   terraform \
+  tuple \
   watch \
   yarn
 
