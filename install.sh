@@ -22,6 +22,7 @@ brew install --cask \
   homebrew/cask-fonts/font-fira-code \
   iterm2 \
   ngrok \
+  nvidia-geforce-now \
   postman \
   slack \
   spotify \
