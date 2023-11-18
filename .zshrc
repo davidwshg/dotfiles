@@ -35,4 +35,6 @@ source $ZSH/oh-my-zsh.sh
 PATH=$PATH:node_modules/.bin
 PATH=$PATH:/opt/homebrew/bin
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
