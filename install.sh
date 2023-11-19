@@ -11,6 +11,7 @@ source ~/.zshrc
 brew update && brew upgrade
 
 brew tap adoptopenjdk/openjdk
+brew tap lencx/chatgpt https://github.com/lencx/ChatGPT.git
 
 brew install --cask \
   1password \
@@ -27,6 +28,9 @@ brew install --cask \
   slack \
   spotify \
   visual-studio-code
+
+brew install --cask --no-quarantine \
+  chatgpt
 
 brew install \
   fluxcd/tap/flux \
