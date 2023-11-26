@@ -20,6 +20,7 @@ brew install --cask \
   docker \
   dynobase \
   google-chrome \
+  grammarly \
   homebrew/cask-fonts/font-fira-code \
   iterm2 \
   ngrok \
@@ -27,6 +28,7 @@ brew install --cask \
   postman \
   slack \
   spotify \
+  tradingview \
   visual-studio-code
 
 brew install --cask --no-quarantine \
