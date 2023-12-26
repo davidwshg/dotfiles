@@ -18,7 +18,6 @@ brew install --cask \
   adoptopenjdk8 \
   datagrip \
   docker \
-  dynobase \
   google-chrome \
   grammarly \
   homebrew/cask-fonts/font-fira-code \
