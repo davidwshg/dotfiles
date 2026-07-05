@@ -1,0 +1,14 @@
+#!/bin/sh
+message=$(cat "$1")
+
+case "$message" in
+  Merge*) exit 0 ;;
+esac
+
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?!?: .+'
+if ! echo "$message" | grep -qE "$pattern"; then
+  echo "Error: commit message does not follow Conventional Commits."
+  echo "Format: <type>[optional scope][optional !]: <description>"
+  echo "Types:  feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert"
+  exit 1
+fi
