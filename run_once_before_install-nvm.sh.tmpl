@@ -1,0 +1,9 @@
+#!/bin/bash
+{{ if ne .chezmoi.os "darwin" -}}
+exit 0
+{{ end -}}
+
+[ -d "$HOME/.nvm" ] && exit 0
+
+echo "Installing nvm..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
