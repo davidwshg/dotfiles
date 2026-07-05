@@ -91,6 +91,10 @@ chezmoi execute-template < $(chezmoi source-path)/dot_zshrc.tmpl
 chezmoi init --reconfigure
 ```
 
+### Package management
+
+Homebrew packages are in `dot_Brewfile.tmpl` (shared across all profiles). Add a package there and run `chezmoi apply` — the install script runs automatically when the Brewfile changes.
+
 ### Adding profile-specific config
 
 Edit `dot_zshrc.tmpl` (or any other `.tmpl` file) and add content inside the relevant block:

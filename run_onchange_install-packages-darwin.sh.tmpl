@@ -1,0 +1,8 @@
+#!/bin/bash
+# Hash triggers re-run when Brewfile changes:
+# {{ include "dot_Brewfile.tmpl" | sha256sum }}
+set -euo pipefail
+
+command -v brew >/dev/null 2>&1 || exit 0
+
+brew bundle install --global --no-upgrade --no-lock
