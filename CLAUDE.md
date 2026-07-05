@@ -58,6 +58,52 @@ This repo uses `.githooks/commit-msg` to validate messages. Activate it once aft
 git config core.hooksPath .githooks
 ```
 
+## Multi-profile setup
+
+This repo supports two profiles selected at init time:
+
+| Profile | Use case |
+|---|---|
+| `personal` | Personal machine — SE + general/gaming use |
+| `work` | Company machine — SE + work-specific tooling |
+
+The active profile is stored in each machine's local `~/.config/chezmoi/chezmoi.toml` (not tracked in this repo). Template files (`.tmpl`) use `{{ if eq .profile "work" }}...{{ end }}` blocks to conditionally include profile-specific content.
+
+### New machine setup
+
+```sh
+chezmoi init git@github.com:davidwshg/dotfiles.git
+# → prompted: "Profile (personal/work):"
+chezmoi apply
+git -C $(chezmoi source-path) config core.hooksPath .githooks
+```
+
+### Useful commands
+
+```sh
+# Check active profile
+chezmoi data | grep profile
+
+# Preview rendered output before applying
+chezmoi execute-template < $(chezmoi source-path)/dot_zshrc.tmpl
+
+# Re-run init prompts (e.g. to change profile)
+chezmoi init --reconfigure
+```
+
+### Adding profile-specific config
+
+Edit `dot_zshrc.tmpl` (or any other `.tmpl` file) and add content inside the relevant block:
+
+```zsh
+{{ if eq .profile "work" }}
+# your work-only config here
+{{ end -}}
+{{ if eq .profile "personal" }}
+# your personal-only config here
+{{ end -}}
+```
+
 ## Current managed files
 
-- `dot_zshrc` → `~/.zshrc` — zsh config using oh-my-zsh (robbyrussell theme), with plugins for git, docker, kubectl, terraform, fzf, nvm, pyenv, and more.
+- `dot_zshrc.tmpl` → `~/.zshrc` — zsh config using oh-my-zsh (robbyrussell theme), with shared plugins plus profile-specific sections for work (`kubectl`, `terraform`) and personal use.
