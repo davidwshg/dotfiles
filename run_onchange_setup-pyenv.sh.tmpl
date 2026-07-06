@@ -1,0 +1,19 @@
+#!/bin/bash
+{{ if ne .chezmoi.os "darwin" -}}
+exit 0
+{{ end -}}
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PYENV_ROOT/bin:$PATH"
+
+command -v pyenv &>/dev/null || { echo "pyenv not found, skipping"; exit 0; }
+
+PYTHON_VERSION="3.10.10"
+
+if ! pyenv versions --bare | grep -qF "$PYTHON_VERSION"; then
+    echo "Installing Python $PYTHON_VERSION..."
+    pyenv install "$PYTHON_VERSION"
+fi
+
+pyenv global "$PYTHON_VERSION"
+echo "Python global version set to $PYTHON_VERSION"
