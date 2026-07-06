@@ -4,44 +4,45 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_UPDATE_PROMPT=true
 
+HISTSIZE=50000
+SAVEHIST=50000
+HIST_STAMPS="yyyy-mm-dd"
+
 plugins=(
-  # --- shared ---
   alias-finder
-  catimg
+  colored-man-pages
   common-aliases
   cp
-  docker
   docker-compose
   extract
+  gh
   git
-  git-extras
-  npm
+  history-substring-search
+  macos
   nvm
   pip
   pyenv
-  virtualenv
-  vscode
-  web-search
-  yarn
+  sudo
   z
   fzf
-  {{- if eq $profile "work" }}
-  # --- work ---
-  kubectl
   terraform
-  {{- end }}
   {{- if eq $profile "personal" }}
-  # --- personal ---
+  kubectl
   {{- end }}
 )
 
 source $ZSH/oh-my-zsh.sh
 
+zstyle ':omz:plugins:alias-finder' autoload yes
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+setopt HIST_IGNORE_ALL_DUPS
+setopt AUTO_CD
+
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$PATH:node_modules/.bin"
-{{ if eq $profile "work" }}
-# Work-specific config
-{{ end -}}
-{{ if eq $profile "personal" }}
-# Personal config
-{{ end -}}
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
