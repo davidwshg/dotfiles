@@ -4,16 +4,10 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
 ## Prerequisites
 
-### 1. Install Homebrew
+### 1. Install chezmoi
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### 2. Install chezmoi
-
-```sh
-brew install chezmoi
+sh -c "$(curl -fsLS get.chezmoi.io)"
 ```
 
 ## Setup
@@ -27,6 +21,7 @@ chezmoi init --apply git@github.com:davidwshg/dotfiles.git
 This will:
 - Clone this repo to `~/.local/share/chezmoi`
 - Prompt for your profile (`personal` or `work`)
+- Auto-install Homebrew if not already present
 - Apply all dotfiles to your home directory
 - Install all Homebrew packages and casks via `~/.Brewfile`
 
