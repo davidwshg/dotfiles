@@ -1,4 +1,10 @@
-{{- $profile := promptStringOnce . "profile" "Profile (personal/work)" -}}
+{{- $profile       := promptStringOnce . "profile"       "Profile (personal/work)" -}}
+{{- $gitName       := promptStringOnce . "gitName"       "Git user name" -}}
+{{- $gitEmail      := promptStringOnce . "gitEmail"      "Git email" -}}
+{{- $sshKeyComment := promptStringOnce . "sshKeyComment" "SSH key comment (e.g. your email or machine name)" -}}
 
 [data]
-    profile = {{ $profile | quote }}
+    profile       = {{ $profile       | quote }}
+    gitName       = {{ $gitName       | quote }}
+    gitEmail      = {{ $gitEmail      | quote }}
+    sshKeyComment = {{ $sshKeyComment | quote }}

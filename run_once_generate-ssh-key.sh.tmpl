@@ -1,0 +1,13 @@
+#!/bin/bash
+{{ if ne .chezmoi.os "darwin" -}}
+exit 0
+{{ end -}}
+
+[ -f "$HOME/.ssh/id_ed25519" ] && exit 0
+
+ssh-keygen -t ed25519 -C {{ .sshKeyComment | quote }} -N "" -f "$HOME/.ssh/id_ed25519"
+
+echo ""
+echo "SSH key generated. Add it to GitHub at: https://github.com/settings/ssh/new"
+echo ""
+cat "$HOME/.ssh/id_ed25519.pub"
