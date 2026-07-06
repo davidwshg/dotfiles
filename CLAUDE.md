@@ -15,6 +15,9 @@ This is a [chezmoi](https://www.chezmoi.io/) dotfiles repository. chezmoi manage
 | `executable_` | file is chmod +x on apply |
 | `symlink_` | creates a symlink rather than a file |
 | `.tmpl` suffix | file is a Go template processed by chezmoi |
+| `run_once_` | script that runs once per machine (keyed by script hash) |
+| `run_once_before_` | same as above, but runs before dotfiles are applied |
+| `run_onchange_` | script that re-runs whenever its content changes |
 
 ## Common commands
 
@@ -73,7 +76,7 @@ The active profile is stored in each machine's local `~/.config/chezmoi/chezmoi.
 
 ```sh
 chezmoi init git@github.com:davidwshg/dotfiles.git
-# → prompted: "Profile (personal/work):"
+# → prompted for: profile (personal/work), git name, git email, SSH key comment
 chezmoi apply
 git -C $(chezmoi source-path) config core.hooksPath .githooks
 ```
@@ -110,4 +113,21 @@ Edit `dot_zshrc.tmpl` (or any other `.tmpl` file) and add content inside the rel
 
 ## Current managed files
 
-- `dot_zshrc.tmpl` → `~/.zshrc` — zsh config using oh-my-zsh (robbyrussell theme), with shared plugins plus profile-specific sections for work (`kubectl`, `terraform`) and personal use.
+### Dotfiles
+
+| Source | Target | Notes |
+|---|---|---|
+| `dot_zshrc.tmpl` | `~/.zshrc` | oh-my-zsh (robbyrussell), shared plugins + profile-specific sections |
+| `dot_gitconfig.tmpl` | `~/.gitconfig` | name/email from init prompts; VS Code as editor |
+| `dot_Brewfile.tmpl` | `~/.Brewfile` | shared across all profiles |
+
+### Scripts
+
+| File | Trigger | What it does |
+|---|---|---|
+| `run_once_before_install-homebrew.sh.tmpl` | once | Installs Homebrew (macOS only, skips if already present) |
+| `run_once_before_install-nvm.sh.tmpl` | once | Installs nvm (macOS only, skips if already present) |
+| `run_once_before_install-ohmyzsh.sh.tmpl` | once | Installs oh-my-zsh (macOS only, skips if already present) |
+| `run_once_generate-ssh-key.sh.tmpl` | once | Generates ed25519 SSH key; prints public key to add to GitHub |
+| `run_onchange_install-packages-darwin.sh.tmpl` | on Brewfile change | Runs `brew bundle install --global` |
+| `run_onchange_setup-pyenv.sh.tmpl` | on script change | Installs Python 3.10.10 via pyenv and sets as global |
