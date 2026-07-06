@@ -2,9 +2,11 @@
 {{- $gitName       := promptStringOnce . "gitName"       "Git user name" -}}
 {{- $gitEmail      := promptStringOnce . "gitEmail"      "Git email" -}}
 {{- $sshKeyComment := promptStringOnce . "sshKeyComment" "SSH key comment (e.g. your email or machine name)" -}}
+{{- $pythonVersion := promptStringOnce . "pythonVersion" "Python version (default: 3.10.10)" -}}
 
 [data]
     profile       = {{ $profile       | quote }}
     gitName       = {{ $gitName       | quote }}
     gitEmail      = {{ $gitEmail      | quote }}
     sshKeyComment = {{ $sshKeyComment | quote }}
+    pythonVersion = {{ $pythonVersion | default "3.10.10" | quote }}

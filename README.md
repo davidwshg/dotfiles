@@ -15,7 +15,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 Initialize and apply the dotfiles:
 
 ```sh
-chezmoi init --apply git@github.com:davidwshg/dotfiles.git
+chezmoi init --apply https://github.com/davidwshg/dotfiles.git
 ```
 
 You will be prompted for:

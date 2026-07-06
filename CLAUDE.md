@@ -75,7 +75,7 @@ The active profile is stored in each machine's local `~/.config/chezmoi/chezmoi.
 ### New machine setup
 
 ```sh
-chezmoi init git@github.com:davidwshg/dotfiles.git
+chezmoi init https://github.com/davidwshg/dotfiles.git
 # → prompted for: profile (personal/work), git name, git email, SSH key comment
 chezmoi apply
 git -C $(chezmoi source-path) config core.hooksPath .githooks
