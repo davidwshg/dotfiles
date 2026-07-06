@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+
+command -v tfenv >/dev/null 2>&1 || { echo "tfenv not found, skipping"; exit 0; }
+
+tfenv install latest:^1
+tfenv use latest:^1
+echo "Terraform $(terraform version | head -1) set as global default"

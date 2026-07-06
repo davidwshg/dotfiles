@@ -1,3 +1,4 @@
+{{- $profile := dig "profile" "" . -}}
 # --- formulae ---
 brew "fzf"
 brew "gh"
@@ -13,6 +14,7 @@ brew "redis"
 brew "tfenv"
 brew "watch"
 {{- if eq $profile "personal" }}
+brew "kubectl"
 brew "go"
 brew "hasura-cli"
 brew "infracost"
