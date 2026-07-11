@@ -17,8 +17,11 @@ Required before Homebrew can install — without this, Homebrew's installer will
 ### 2. Install chezmoi
 
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)"
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 ```
+
+Installs chezmoi to `~/.local/bin` and puts it on PATH for this shell session. Future shells will have it on PATH automatically once the dotfiles are applied (see below).
 
 ## Setup
 
