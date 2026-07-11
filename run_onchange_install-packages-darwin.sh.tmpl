@@ -3,6 +3,8 @@
 # {{ include "dot_Brewfile.tmpl" | sha256sum }}
 set -euo pipefail
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 command -v brew >/dev/null 2>&1 || exit 0
 
 brew bundle install --global --no-upgrade

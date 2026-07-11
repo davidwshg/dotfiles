@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 command -v tfenv >/dev/null 2>&1 || { echo "tfenv not found, skipping"; exit 0; }
 
 tfenv install latest:^1
