@@ -6,7 +6,15 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
 ## Prerequisites
 
-### 1. Install chezmoi
+### 1. Install Xcode Command Line Tools
+
+```sh
+xcode-select --install
+```
+
+Required before Homebrew can install — without this, Homebrew's installer will pause mid-setup with an interactive GUI prompt. Only needs to run once per machine.
+
+### 2. Install chezmoi
 
 ```sh
 sh -c "$(curl -fsLS get.chezmoi.io)"
