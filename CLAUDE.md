@@ -131,3 +131,6 @@ Edit `dot_zshrc.tmpl` (or any other `.tmpl` file) and add content inside the rel
 | `run_once_generate-ssh-key.sh.tmpl` | once | Generates ed25519 SSH key; prints public key to add to GitHub |
 | `run_onchange_install-packages-darwin.sh.tmpl` | on Brewfile change | Runs `brew bundle install --global` |
 | `run_onchange_setup-pyenv.sh.tmpl` | on script change | Installs Python 3.10.10 via pyenv and sets as global |
+| `run_onchange_setup-tfenv.sh.tmpl` | on script change | Installs latest Terraform 1.x via tfenv and sets as default |
+| `run_onchange_setup-nvm.sh.tmpl` | on script change | Installs Node LTS via nvm and sets as default |
+| `run_onchange_setup-macos-defaults.sh.tmpl` | on script change | Sets macOS appearance, Dock prefs, and pins apps via dockutil |

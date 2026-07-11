@@ -2,6 +2,8 @@
 
 Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
+> **Platform:** macOS on Apple Silicon (ARM64) only. Intel Macs and Linux are not supported.
+
 ## Prerequisites
 
 ### 1. Install chezmoi
@@ -36,6 +38,9 @@ This will:
 - Apply dotfiles to `~`
 - Install all Homebrew packages and casks via `~/.Brewfile`
 - Install Python 3.10.10 via pyenv and set as global
+- Install Terraform (latest 1.x) via tfenv and set as global default
+- Install Node LTS via nvm and set as default
+- Apply macOS system defaults and pin apps to the Dock
 
 After setup, activate the git commit hook for this repo:
 
