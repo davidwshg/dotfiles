@@ -7,4 +7,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 command -v brew >/dev/null 2>&1 || exit 0
 
-brew bundle install --global --no-upgrade
+if ! brew bundle install --global --no-upgrade; then
+  echo "Warning: one or more Homebrew packages/casks failed to install — see output above. Continuing setup." >&2
+fi
