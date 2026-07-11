@@ -2,10 +2,15 @@
 set -euo pipefail
 
 ###############################################################################
+# Appearance
+###############################################################################
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
+###############################################################################
 # Dock — behavior
 ###############################################################################
 defaults write com.apple.dock orientation   -string "bottom"
-defaults write com.apple.dock tilesize      -int 48
+defaults write com.apple.dock tilesize      -int 50
 defaults write com.apple.dock autohide      -bool true
 defaults write com.apple.dock magnification -bool false
 defaults write com.apple.dock show-recents  -bool false
