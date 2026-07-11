@@ -53,6 +53,8 @@ This will:
 - Install Node LTS via nvm and set as default
 - Apply macOS system defaults and pin apps to the Dock
 
+> Some macOS system defaults (e.g. dark mode appearance, scroll direction) only take full effect after logging out or restarting the machine.
+
 After setup, activate the git commit hook for this repo:
 
 ```sh
