@@ -66,6 +66,7 @@ git -C $(chezmoi source-path) config core.hooksPath .githooks
 | File | Source |
 |---|---|
 | `~/.zshrc` | `dot_zshrc.tmpl` |
+| `~/.zprofile` | `dot_zprofile` |
 | `~/.gitconfig` | `dot_gitconfig.tmpl` |
 | `~/.Brewfile` | `dot_Brewfile.tmpl` |
 

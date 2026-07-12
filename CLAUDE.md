@@ -120,6 +120,7 @@ Edit `dot_zshrc.tmpl` (or any other `.tmpl` file) and add content inside the rel
 | `dot_zshrc.tmpl` | `~/.zshrc` | oh-my-zsh (robbyrussell), shared plugins + profile-specific sections |
 | `dot_gitconfig.tmpl` | `~/.gitconfig` | name/email from init prompts; VS Code as editor |
 | `dot_Brewfile.tmpl` | `~/.Brewfile` | shared across all profiles |
+| `dot_zprofile` | `~/.zprofile` | sets up pyenv (`PYENV_ROOT`, shims in `$PATH`) before `.zshrc` loads, so oh-my-zsh's `pyenv` plugin doesn't warn about missing shims |
 
 ### Scripts
 
