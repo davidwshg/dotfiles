@@ -1,3 +1,4 @@
+{{- $profile := dig "profile" "" . -}}
 #!/bin/bash
 set -euo pipefail
 
@@ -27,6 +28,7 @@ defaults write com.apple.dock show-recents  -bool false
 ###############################################################################
 if command -v dockutil >/dev/null 2>&1; then
   dockutil --remove all --no-restart
+{{- if eq $profile "personal" }}
   dockutil --add /Applications/WhatsApp.app                          --no-restart
   dockutil --add /System/Applications/Mail.app                       --no-restart
   dockutil --add /System/Applications/Calendar.app                   --no-restart
@@ -38,6 +40,7 @@ if command -v dockutil >/dev/null 2>&1; then
   dockutil --add /Applications/GeForceNOW.app                        --no-restart
   dockutil --add /System/Applications/TV.app                         --no-restart
   dockutil --add /System/Applications/Photos.app                     --no-restart
+{{- end }}
   dockutil --add /Applications/Spotify.app                           --no-restart
   dockutil --add "/Applications/Google Chrome.app"                   --no-restart
   dockutil --add /Applications/Claude.app                            --no-restart
