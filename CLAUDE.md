@@ -43,15 +43,13 @@ chezmoi managed
 
 ## Git conventions
 
-All commits and PR titles must follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
+This repo's `commit-msg` hook enforces (base Conventional Commits + no-co-author rules are in global CLAUDE.md; breaking-change convention: `!` or `BREAKING CHANGE:` footer):
 
 ```
 <type>[optional scope][optional !]: <description>
 ```
 
 Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
-
-Do not add `Co-Authored-By:` trailers to commits.
 
 ### Enforcing the hook
 
